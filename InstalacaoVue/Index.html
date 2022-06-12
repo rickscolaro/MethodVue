@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="src/app.js" defer></script>
+  </head>
+  <body>
+    <div id="app">
+      <p>O meu nome é {{"Ricardo"}} e minha idade é {{age}} anos</p>
+      <form id="app-form">
+        <!--V-mode é uma forma de comunicar o vue que vc quer salvar este dado do input 
+        em alguma parte dele -->
+        <input type="text" v-model="input_name" placeholder="Digite seu nome" />
+        <!--v-on:click permite ativar um evento apartir do click do botão-->
+        <input type="submit" value="Enviar" v-on:click="submitForm" />
+        <p>O meu nome é: {{name}}</p>
+        <p>Data binding: {{input_name}}</p><!--Replicação do dado em tempo real Simultaneamente-->
+      </form>
+    </div>
+  </body>
+</html>
